@@ -15,6 +15,7 @@ public class Prodotto {
 		this.iva = iva;
 	}
 	
+
 	public int getCodice() {
 		return codice;
 	}
@@ -48,5 +49,17 @@ public class Prodotto {
 	}
 	public void setIva(int iva) {
 		this.iva = iva;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Prodotto: \n"
+				+ "codice: " + getCodice() + "\n"
+				+ "nome: " + getNome() + "\n"
+				+ "descrizione: " + getDescrizione() + "\n"
+				+ "prezzo: " +  getPrezzo() + "€"+ "\n"
+				+ "iva: " + getIva()+ "%" + "\n"
+				+"---------------------------------";
 	}
 }
