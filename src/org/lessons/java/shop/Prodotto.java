@@ -51,6 +51,14 @@ public class Prodotto {
 		this.iva = iva;
 	}
 	
+	public float getPrezzoBase() {
+		return getPrezzo();
+	};
+	
+	public float getPrezzoIva(){
+		return getPrezzo() * (100 + iva) / 100;
+	};
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -58,8 +66,9 @@ public class Prodotto {
 				+ "codice: " + getCodice() + "\n"
 				+ "nome: " + getNome() + "\n"
 				+ "descrizione: " + getDescrizione() + "\n"
-				+ "prezzo: " +  getPrezzo() + "€"+ "\n"
-				+ "iva: " + getIva()+ "%" + "\n"
+				+ "prezzo base: " + String.format("%.02f", getPrezzoBase()) + "€"+ "\n"
+				+ "iva: " + getIva() + "%" + "\n"
+				+ "prezzo con iva: " + String.format("%.02f", getPrezzoIva()) + "€"+ "\n"
 				+"---------------------------------";
 	}
 }
