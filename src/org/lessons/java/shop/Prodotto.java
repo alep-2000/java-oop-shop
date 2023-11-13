@@ -59,6 +59,10 @@ public class Prodotto {
 		return getPrezzo() * (100 + iva) / 100;
 	};
 	
+	public String getCodiceNome() {
+		return getCodice() + "-" + getNome();
+	}
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -69,6 +73,7 @@ public class Prodotto {
 				+ "prezzo base: " + String.format("%.02f", getPrezzoBase()) + "€"+ "\n"
 				+ "iva: " + getIva() + "%" + "\n"
 				+ "prezzo con iva: " + String.format("%.02f", getPrezzoIva()) + "€"+ "\n"
+				+ "codice + nome: " + getCodiceNome()+ "\n"
 				+"---------------------------------";
 	}
 }
