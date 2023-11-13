@@ -36,7 +36,7 @@ public class Main {
 		Random r = new Random();
 		
 		for(int x=0; x<prodotti.length; x++) {
-			Prodotto p = new Prodotto(r.nextInt(Integer.MAX_VALUE), prodotti[x], descrizioni[x] , r.nextFloat(0,300), r.nextInt(60));
+			Prodotto p = new Prodotto(r.nextInt(100000000), prodotti[x], descrizioni[x] , r.nextFloat(0,300), r.nextInt(60));
 			System.out.println(p);
 		}
 	}

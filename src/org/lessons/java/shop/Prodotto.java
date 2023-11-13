@@ -63,6 +63,10 @@ public class Prodotto {
 		return getCodice() + "-" + getNome();
 	}
 	
+	public String getCodiceModificato() {
+		return String.format("%08d", codice);
+	};
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
